@@ -1,0 +1,92 @@
+#El operador if es usado para programar una condicional, por ejemplo: si queremos tomar café o té. Por su parte else, lo usaremos para contrastar dicha situación
+
+num = int(input("ingresar un número  "))
+if num < 0:
+  print(num, "el número es negativo")
+else:
+  print(num, "el número es positivo")
+
+  num2 = int(input("ingresa un número positivo  "))
+if num2 > 0:
+  print(num2, "es positivo")
+  print("el cuadrado del número es", num2*num2)
+  print("Adios, respeto!!!")
+else:
+    print("no conoces los números positivos???")
+    print("No por dios !!!")
+
+
+# Sentencias While, este tipo de expresiones se utilizan en la mayoria de los lenguajes de programacion, su utilidad radica en que los usamos para iterar o repetir alguna sentencia
+
+count = 0
+print('Iniciar')
+while count < 10:
+  print(count, ' ', end='')
+  count += 1
+print()
+print('Realizado')
+
+#Sentencia loop, al igual que while, se utiliza para generar iteraciones
+
+for i in range (0,10):
+  print(i,'',end='')
+print()
+print('Hecho')
+
+print('Los siguientes numeros se encuentran en un rango incremental de 2')
+for i in range(0,20,2):
+  print(i, '', end= "")
+print()
+print('Logrado')
+
+print('Solo vamos a imprimir el codigo si todas las iteraciones se completan')
+num = int(input('Ingresa un numero para comprobar: '))
+for i in range(0,6):
+  if i == num:
+    break
+  print(i, '', end='')
+print('Logrado!!!')
+
+for i in range(0,10):
+  print(i,'',end= "")
+  if i % 2 == 1:
+    continue
+  print('Tenemos un numero par')
+  print('Nos gustan los numeros pares')
+print('logrado')
+
+print('Solo vamos a imprimir si las interacciones se cumplen')
+num = int(input("ingresa un numero, para: "))
+for i in range(0 ,6):
+  if i ==num:
+    break
+  print(i,'',end='')
+else:
+  print()
+  print('todas las interacciones logradas exitosamente')
+
+# Juego del dado
+import random
+MIN = 1
+MAX = 6
+roll_again = 's'
+while roll_again == 's':
+  print('Tirando el dado...')
+  print('El valor del dado es ...')
+  dice1=random.randint(MIN,MAX)
+  print('dado 1: ', dice1)
+  dice2=random.randint(MIN,MAX)
+  print('dado 2: ', dice2)
+  roll_again = input('jugamos otra vez??? (s/n):')
+
+  #funciones recursivas 
+
+  def factorial (n):
+  if n == 1 :
+    return 1
+  else:
+    return n * factorial(n-1)
+    return res
+print(factorial(9))
+
+# ejercicios resueltos 
