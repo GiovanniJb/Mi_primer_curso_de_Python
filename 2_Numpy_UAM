@@ -1,0 +1,99 @@
+#Clase de numpy
+#Numpy viene del acronimo Numerical Python
+#La documentación necesaria la podemos encontrar en la página https://numpy.org/
+
+import numpy as np
+
+# listas en numpy
+L = list(range(10))
+
+print(L)
+
+# que tipo de elemento es L
+type(L)
+
+type(L[0])  # que tipo de elementos tiene la lista L
+
+# crearemos una cadena que se asocie a la lista L
+L2 = [str(c) for c in L]
+
+print(L2)
+
+# tipo de L2
+type(L2)
+
+#Si bien las listas son últiles, estas son elementos limitados para el analisis de datos. Las listas únicamente tienen tres elementos, un encabezado L, elementos y dimensión. Por lo que es necesario usar los arrays, estos cuentan con. encabezados, datos, dimensión y pasos.
+
+A = np.array(L)
+
+print(A)
+
+type(A)
+
+# arrays multidimensionales
+M1 = [[2,3,4],
+      [5,6,7],
+      [8,9,10]]
+
+print(M1)
+
+M2 = np.array(M1)
+
+print(M2)
+
+type(M1)
+
+type(M2)
+
+#Ahora bien, Numpy tiene metodos rapidos para crear aquellas matrices que son más utilizadas, tales como:
+
+M0 = np.zeros(10, dtype=int)
+
+print(M0)
+
+M0_0 = np.zeros(10, dtype=float)
+
+print(M0_0)
+
+M_1 = np.ones((5,7), dtype = int)
+
+print(M_1)
+
+M_2 = np.full((3,3), 3.1416)
+
+print(M_2)
+
+#Como hemos visto, hemos usado el método arange, este se usa para darle crear un array con un rango, con el número de elementos que queremos, ahora lo usaremos para crear un rango con un número inicial, uno final y el número de pasos
+
+q_1 = np.array(range(0,20,2))
+
+print(q_1)
+
+#también contamos con un método para crear una secuencia
+
+#que inicie en 0 y termine en 1, en 5 pasos
+q_2 = np.linspace(0,1,5)
+
+print(q_2)
+
+# arrays con elementos aleatorios
+q_3 = np.random.random((3,3))
+
+print(q_3)
+
+# que estos elementos aleatorios tengan una determinara distribución de probabilidad, con media 0 y std 1
+q_4 = np.random.normal(0,1,(4,4))
+
+print(q_4)
+
+q_5 = np.random.binomial(2,.5,size=20)
+
+print(q_5)
+
+# crear una matriz de identidad
+q_6 = np.eye(3)
+
+print(q_6)
+
+
+
