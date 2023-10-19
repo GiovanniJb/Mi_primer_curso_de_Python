@@ -95,5 +95,55 @@ q_6 = np.eye(3)
 
 print(q_6)
 
+#aritmetica con arrays
+x = np.arange(4)
+print('x =', x)
+print('x + 4 = ', x +4)
+print('X * 120 = ', x * 120)
+print('x - 70 = ', x-7)
+print('x / 2 = ', x/2)
+#división entera
+print('x//3 = ', x // 3)
 
+print((5*x+12)-1)
 
+np.add(x,2)
+
+np.multiply(x,5)
+
+np.power(x,7)
+
+y = np.array([-1, 2, -4, 5])
+print(y)
+type(y)
+
+# valor absoluto
+abs(y)
+
+# exponentes y logaritmos
+print(x)
+print('e^x = ', np.exp(x))
+print('x al cuadrado es ',  x^2)
+print('logaritmo natural de x es', np.log(x))
+print(' el logatirmo natural de valor aobsoluto de y es', np.log(abs(y)))
+
+#aritmetica de matrices
+print('la multiplicación de los vectores x y y es: ', x*y)
+
+# aritmetica dentro de los elementos de los vectores
+np.add.reduce(x)
+
+np.multiply.reduce(y)
+
+np.multiply.accumulate(x)
+
+np.add.accumulate(y)
+
+z = np.random.random((4,4))
+print(z)
+
+np.sum(z)
+z.min(axis=0)
+np.std(z)
+np.mean(z)
+np.var(z)
